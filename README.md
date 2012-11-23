@@ -10,11 +10,11 @@ How to compile
 
 You need sdl development packages. For Raspbian:
 
-  sudo apt-get install libsdl-dev
+    sudo apt-get install libsdl-dev
 
 Then
 
-  make
+    make
 
 ### Cross compile
 
@@ -23,7 +23,7 @@ I recommend using [this](https://github.com/raspberrypi/tools) toolchain and to
 follow [this](http://www.raspberrypi.org/phpBB3/viewtopic.php?f=31&t=8478) to get a Raspbian image as SYS_ROOT.
 After that simply run
 
-  make
+    make
 
 How to run
 ----------
@@ -37,13 +37,13 @@ Create a cps2emu directory with the following structure:
 
 Place the roms zip in the roms/ directory and from the csp2emu directory run
 
-  ./cps2romcnv <rom>
+    ./cps2romcnv <rom>
 
 where <rom> is the rom name you want to run (without the extension).
 This will create the cache file for the rom, which is mandatory. It can take a while to run, so be patient.
 After that you can run
 
-  ./cps2emu <rom> #without the extension
+    ./cps2emu <rom> #without the extension
 
 And that's it.
 
@@ -51,11 +51,14 @@ Keys
 ----
 
 Arrows: stick
-ASDZCX: buttons
-T: insert coin
-U: start
-L: menu
 
+ASDZCX: buttons
+
+T: insert coin
+
+U: start
+
+L: menu
 
 Issues
 ------
