@@ -63,5 +63,5 @@ L: menu
 Issues
 ------
 
-The sound is not working
-It doesn't refresh the whole when going from a menu to the game.
+- The sound is not working
+- It doesn't erase the whole screen when going from a menu to the game.
