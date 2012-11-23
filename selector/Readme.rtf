@@ -1,0 +1,193 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf410
+{\fonttbl\f0\froman\fcharset77 TimesNewRomanPS-BoldMT;\f1\froman\fcharset77 TimesNewRomanPSMT;\f2\fnil\fcharset77 Monaco;
+}
+{\colortbl;\red255\green255\blue255;}
+\paperw11899\paperh16839\margl1440\margr1440\vieww16580\viewh18100\viewkind0
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qc\pardirnatural
+
+\f0\b\fs32 \cf0 \ul \ulc0 \CocoaLigature0 *** Selector V1.2 (c) Kounch 2006 ***\
+\
+
+\f1\b0\fs28 \ulnone http://gp2x-selector.sourceforge.net
+\fs26 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+
+\f0\b \cf0 \ul Introduction
+\f1\b0 \ulnone \
+\
+Selector is a GP2X program which helps to launch other programs that need as a parameter the path to a file (for example, the first beta versions of GNUBoy2X), or to pass command line options (for example, to load a quake MOD).\
+\
+In order to use Selector, three files are needed:\
+\
+1. selector. This is the program that does all the job.\
+\
+2. A configuration file. Keep on reading to understand its format.\
+\
+3. A launch script which calls selector telling it where is the configuration file and afterwards launchs the main menu of GP2X. Keep on reading to see an example.\
+\
+\
+
+\f0\b \ul Controls
+\f1\b0 \ulnone \
+\
+Once configured, after launching, it will appear a file selection interface where you can navigate using the joystick, and choose a file using B, X, Select or the joystick button.\
+A and Y buttons let you select different command line options (useful to launch, for example, Quake with different startup options, or gnuboy2x with different sound qualities of disabling it).\
+L and R buttons are used to navigate faster (screen by screen).\
+Vol- and Vol+ buttons allow to define the desired CPU Speed that the console will have when launching the external program. If both buttons are pressed at once, it is restored to the speed that the CPU had when Selector was launched.\
+\
+\
+
+\f0\b \ul Configuration file
+\f1\b0 \ulnone \
+\
+The configuration file is a text file with UNIX line-endings (not MS-DOS/Windows).\
+\
+Each line of the configuration file can be in one of the following formats:\
+\
+-(Optional) All lines preceded by # are considered as comments and will be ignored.\
+\
+-(Optional) A line starting with the keyword langCode= followed by a language code (actually only EN for  English, TR for Turkish and ES for Spanish are valid language codes). Default value is Spanish.\
+\
+-(Optional) A line starting with the keyword skinPath= followed by a path. The program will look in the directory defined by the path for a PNG image file named fondo.PNG, which must have a size of 320x240 pixels, and use it as Background for the interface. There are some examples in the Skins folder. Default value is no skin (green background).\
+\
+-(Optional) A line starting with the keyword layoutCode= followed by a number, which indicates a layout number for the interface elements. At the moment there are two options;\
+0, where the screen is updated with a copyright message at the top, followed by the actual command line selected, and a help message at the bottom of  the screen.\
+1, with no copyright message, and the bottom help message is substituted by the command line selected.\
+\
+-(Optional) A line starting with the keyword scrollWrap= followed by a number, which indicates if scroll wrapping should be active or not. The default is scroll wrap active. At the moment there are four options;\
+0, no scroll wrap. \
+1, scroll wrap active.\
+2, no scroll wrap, but pressing the joystick to left and right will switch to the previous and next navigation screens.\
+3, scroll wrap active, and pressing the joystick to left and right will switch to the previous and next navigation screens.and \
+\
+-(Optional) A line starting with the keyword doubleColumn= followed by a number, which indicates if two columns file listing should be active, instead of the default single column view. At the moment there are two options;\
+0, Single Column View. \
+1, Two Columns View.\
+\
+-(Optional) A line starting with the keyword selectRectangle= followed by a number, which indicates the kind of selection rectangle to use in the interface. At the moment there are four options;\
+0, no selection rectangle.\
+1, green selection rectangle.\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+\cf0 2, no selection rectangle, but the symbol 
+\f2\fs20 <-- 
+\f1\fs26 is used instead.\
+3, green selection rectangle, and the symbol 
+\f2\fs20 <-- 
+\f1\fs26 is used also.\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+\cf0 \
+-(Mandatory) A line (or lines) starting with the keyword cmdLine= followed to the path to an executable GP2X file, including\
+all the desired parameters. Each of this lines will be an option to launch from the selector.\
+\
+-(Mandatory) A line starting with the keyword baseDir= followed with the path to the directory which will be taken as base for the program file interface. Uppon starting selector, it will display the directories and files filtered inside this directory, and will allow to navigate through it and its subdirectories\
+but not through upper directories.\
+\
+-(Optional) A line (or lines) starting with the keyword fileFilter= followed by one file extension which will be used as a filter when showing files. If there was no line with this keyword, selector will  display all the files in the directories.\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+\cf0 -(Optional) A line starting with the keyword cpuSpeed= followed by a number indicating a default CPU speed to be used at launch instead of the actual console speed.\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+\cf0 \
+\
+
+\f0\b \ul Execution Script
+\f1\b0 \ulnone \
+\
+As selector needs as a parameter the name of its configuration file, a shell  script is needed to launch it as well as, if necessary, to launch back the GP2X main menu.\
+\
+This is a simple example script:\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+
+\f2\fs22 \cf0 --------------------------------\
+#!/bin/sh\
+\
+./selector ./gnuboy_config\
+sync\
+\
+cd /usr/gp2x/\
+exec /usr/gp2x/gp2xmenu\
+--------------------------------\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+
+\f1\fs26 \cf0 \
+Now copying this script into a directory of your SD card, along with selector and a configuration file named gnuboy_config, it would launch selector with that configuration, sync the SD card after exit, and launch again the GP2X main menu.\
+\
+It is important to remember that the script file is a text file with UNIX line-endings (not MS-DOS/Windows) and that it must have .gpe extension.\
+\
+\
+
+\f0\b \ul Known Problems
+\f1\b0 \ulnone \
+\
+- File and directory paths in cmdLine must not have blank spaces for the moment.\
+\
+\
+
+\f0\b \ul Future plans, features, etc.
+\f1\b0 \ulnone \
+\
+- Better graphical interface, with icons.\
+- Sound?\
+\
+\
+
+\f0\b \ul License, atributions, etc.\
+
+\f1\b0 \ulnone \
+This program uses GP2X minimal library v0.B from rlyeh as well as part of the source code of cpu_speed utility, made by Hermes/PS2Reality and modified by Vimacs and god_at_hell.\
+\
+This product includes software developed by Greg Roelofs and contributors for the book, "PNG: The Definitive Guide," published by O'Reilly and Associates.\
+\
+It also includes part of the libraries minizip (version 1.01e),  by  Gilles Vollant, which have modified code by Info-ZIP and Terry Thorsen (see the files unzip.c y unzip.h for more information and the terms of use).\
+\
+This program is distributed under a GPL License\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+
+\f2\fs22 \cf0 Copyright (C) 2006  Kounch\
+\
+Parts Copyright (c) 2005 by rlyeh\
+Parts Copyright (c) 2005 Hermes/PS2Reality and modified by Vimacs and god_at_hell(LCD-part)\
+Parts Copyright (c) 2004-2005 by Daniel Aarno\
+Parts Copyright (c) 1998-2000 Greg Roelofs. All rights reserved.\
+Parts Copyright (c) 1998-2005 Gilles Vollant\
+\
+This program is free software; you can redistribute it and/or modify\
+it under the terms of the GNU General Public License as published by\
+the Free Software Foundation; either version 2 of the License, or\
+(at your option) any later version.\
+\
+This program is distributed in the hope that it will be useful,\
+but WITHOUT ANY WARRANTY; without even the implied warranty of\
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\
+GNU General Public License for more details.\
+\
+You should have received a copy of the GNU General Public License\
+along with this program; if not, write to the Free Software\
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+
+\f1\fs26 \cf0 \
+\
+
+\f0\b \ul Version history\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\qj\pardirnatural
+
+\f1\b0 \cf0 \ulnone 1.2 Added CPU Speed chooser. Added text symbol selection option. Added left and right joystick screen change option.\
+1.1 Added DoubleColumn and Scroll Wrap options. Changed again CPU Speed to 60MHz for TV-Out Compatibility.\
+1.0 Final Release. Minor code cleanup and added vsync calls before RGB flipping.\
+0.9 Added display support for ISO-8859-1 characters in the names of files and directories. Changed the screen writing system to Minimal Lib 0.B. Changed CPU Sped to 56MHz to fix brightness problems with firmware 2.0.0. Added SelectRectangle option.\
+0.8 Internal Test Release\
+0.7 Added turkish translation, thanks to techFreak from gp32 Extreme boards.\
+0.6 Third public version. Adpated to Minimal Lib 0.B. Added control for faster navigation with L and R. Better skin support. Added multiple layouts.\
+0.5 Second public version. Background PNG image support.\
+0.4 (Interna). CPU speed set to 60MHz while running, recovering at exit the previous value.\
+0.3 (Internal). Directory identification bugs corrected. Added error message inplementation.\
+0.2 (Internal). Text strings localization to english and spanish.\
+0.1 First public version. Basic Functionality.\
+}

@@ -1,0 +1,26 @@
+cps2emu - Author: Oriol F. "kkito" aka "wereoffs" "werewolf"
+
+Cps2emu for the N900 is a port from cps2emu for gp2x.
+
+
+How to run:
+1-uncompress the tar.gz (tar xvzf cps2emu.tar.gz) in your device where there is enough free space, for example in /home/user/cps2emu/
+
+2-create cache data from zipped rom using romcnv (included in the .tar.gz package), and copy the resulting .cache file in cache/ dir inside cps2emu folder.
+
+3-copy rom files in roms/ dir.
+
+4-run the emulator with: "./cps2emu romname"
+	ex: ./cps2emu ddsom
+
+5-Have fun!
+
+English keyboard layout is needed to be able to play the emulator, you can change it in N900 Settings menu.
+
+Buttons:
+
+Arrow keys: joystick
+Buttons: qweasd 
+Player 1 coin: t
+Player 1 start: u
+Reset machine: r

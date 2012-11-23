@@ -1,0 +1,66 @@
+include config.mk
+
+RM     = rm -f
+RMDIR  = rm -rf
+MKDIR  = mkdir -p
+
+CC     = gcc
+CPP    = g++
+AS     = g++
+STRIP  = strip
+
+PROG   = cps2emu 
+
+CFLAGS = -O2 -mtune=i386 -g -Wall
+#CFLAGS = -mcpu=arm920 -mtune=arm920t -DN900 
+#CFLAGS = -march=armv7-a -mcpu=cortex-a8 -mtune=cortex-a8 -DN900
+#CFLAGS = -O3 -mcpu=cortex-a8 -mtune=cortex-a8 -ftree-vectorize -fomit-frame-pointer -fsigned-char -mfpu=neon -mfloat-abi=softfp -DALIGN_INTS -DALIGN_SHORTS -DLSB_FIRST -DN900
+#CFLAGS += -O3 -ffast-math -fstrict-aliasing -mstructure-size-boundary=32 -fexpensive-optimizations 
+#CFLAGS += -O3 -ffast-math -fstrict-aliasing -fexpensive-optimizations
+#CFLAGS += -fweb -frename-registers -fomit-frame-pointer 
+#CFLAGS += -falign-functions=32 -falign-loops -falign-labels -falign-jumps 
+#CFLAGS += -finline -finline-functions -fno-builtin -fno-common -floop-optimize 
+#CFLAGS += -fverbose-asm -save-temps 
+#CFLAGS += -I$(DEVKIT)/include -I$(DEVKIT)/include/SDL -I$(DEVKIT)/sysroot/usr/include
+#CFLAGS += -Isrc -Isrc/cps2
+
+CFLAGS += `pkg-config hildon-1 --cflags` 
+LDFLAGS = `pkg-config hildon-1 --libs`
+
+OBJ  = static/emumain.o static/emudraw.o static/draw_arm.o static/usbjoy.o static/font.o static/memset.o static/memcpy.o static/zip/unzip.o static/zip/zfile.o \
+	static/sound/qsound.o static/sound/sndintrf.o static/cps2/cache.o static/cps2/cps2.o static/cps2/cps2crpt.o \
+	static/cps2/driver.o static/cps2/eeprom.o static/cps2/inptport.o static/cps2/memintrf.o static/cps2/sprite.o static/cps2/state.o static/cps2/timer.o \
+	static/cps2/vidhrdw.o static/cps2/loadrom.o static/cps2/coin.o static/cps2/hiscore.o \
+	static/cpu/cyclone/Cyclone.o static/cpu/cyclone/m68000.o static/cpu/drz80/DrZ80.o static/cpu/drz80/z80.o
+OBJ = #static/cpu/cyclone/Cyclone.o static/cpu/cyclone/m68000.o static/cpu/z80/z80.o static/cpu/z80/cz80.o
+#static/cpu/m68000/c68k.o static/cpu/m68000/m68000.o static/cpu/m68000/c68kexec.o static/cpu/z80/z80.o static/cpu/z80/cz80.o
+#static/cpu/m68000/c68k_ini.o static/cpu/m68000/c68k_op.o
+
+all: all-before $(PROG)
+
+all-before:
+	$(MKDIR) "static"
+#	$(MKDIR) "static/zip"
+#	$(MKDIR) "static/sound"
+#	$(MKDIR) "static/cps2"
+#	$(MKDIR) "static/cpu/cyclone"
+#	$(MKDIR) "static/cpu/drz80"
+#	$(MKDIR) "static/cpu/m68000"
+#	$(MKDIR) "static/cpu/z80"
+
+clean:
+	$(RMDIR) "static"
+	$(RM) $(PROG)
+
+$(PROG): $(OBJ)
+	$(CC) $(OBJ) -o $@ $(LDFLAGS)
+	$(STRIP) $@
+
+static/%.o:	src/%.c
+	$(CC) $(INCLUDES) -c $(CFLAGS) $< -o $@
+
+static/%.o:	src/%.s
+	$(CC) $(INCLUDES) -c $(CFLAGS) $< -o $@
+
+static/%.o:	src/%.S
+	$(AS) $(INCLUDES) -c $(CFLAGS) $< -o $@

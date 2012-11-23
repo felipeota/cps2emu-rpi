@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.2
+Type=Application
+Name=CPS2emu
+Exec=/usr/bin/cps2gui
+Icon=cps2emu
+MimeType=application/x-executable;
+

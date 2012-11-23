@@ -1,0 +1,45 @@
+cps2emu (0.6-r1) unstable; urgency=low
+  * postinst revised, again
+  * We not need ~/MyDocs/ROMs/CPS2 anymore
+  * State SAVE and LOAD working, use 'l' to show MENU
+  * CPS2gui now can load from any folder
+  * Last file and folder used, when reopen cps2gui.
+  * HiScore working, romname.hi are saved to "./hi"
+  * Save state on exit and load state on start a game, saved to "./state"
+  * Autocreate ./nvram and ./hi
+  * Config file at ~/.config/cps2emu/cps2gui.conf
+
+ -- Marcus Fazzi (Anunakin) <anunakin@ieee.org>  Thu, 28 Oct 2010 15:56:13 -0300
+
+cps2emu (0.5) unstable; urgency=high
+  * postinst revised
+  * first release for extras-devel
+  * cps2gui package merged
+
+ -- Marcus Fazzi (Anunakin) <anunakin@ieee.org>  Tue, 26 Oct 2010 10:11:55 -0300
+
+cps2emu (0.4) unstable; urgency=low
+  * romcnv renamed to cps2romcnv
+  * cps2romcnv and cps2emu compiles with same Makefile
+  * Now we have a cps2gui!
+  * cps2gui, not in same Makefile and .deb, for now! ;)
+
+ -- Marcus Fazzi (Anunakin) <anunakin@ieee.org>  Sat, 23 Oct 2010 22:38:13 -0300
+
+cps2emu (0.3) unstable; urgency=low
+  * Support to PS3 Dualshock/Sixaxis controlers.
+
+ -- Marcus Fazzi (Anunakin) <anunakin@ieee.org>  Thu, 21 Oct 2010 09:36:45 -0300
+
+cps2emu (0.2) unstable; urgency=low
+  * XSBC-Bugtracker added to debian/control
+  * extras-devel release
+  * Insane ARM Cortex A8 CFLAGs!
+
+ -- Marcus Fazzi (Anunakin) <anunakin@ieee.org>  Tue, 19 Oct 2010 14:46:15 -0300
+
+cps2emu (0.1) unstable; urgency=high
+  * Binaries and Sources from garage.maemo.org.
+
+ -- Oriol Farras <wereoffs@gmail.com>  Mon, 18 Jan 2010 09:34:34 -0300
+

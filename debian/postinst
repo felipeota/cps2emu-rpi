@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ -x /usr/bin/update-desktop-database ]; then
+  update-desktop-database /usr/share/applications
+fi
+
+if [ -x /usr/bin/gtk-update-icon-cache ]; then
+  gtk-update-icon-cache -f /usr/share/icons/hicolor
+fi
+
+if [ -x /usr/bin/maemo-select-menu-location ]; then
+  maemo-select-menu-location cps2.desktop
+fi
+
+#copy config files
+#cp -r /opt/cps2emu/config/* /home/user/MyDocs/ROMs/CPS2/
+#chown -R 29999:29999 /home/user/.cps2emu
+
+test -x /usr/bin/maemo-confirm-text || exit 0
+
+cat <<EOF > /tmp/alert.txt
+This is an emulator for CPS2 Machines!
+
+You need CPS2 zipped ROMs!
+EOF
+maemo-confirm-text "CPS2 Emulator" /tmp/alert.txt
+
+exit 0

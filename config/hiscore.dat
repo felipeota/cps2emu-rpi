@@ -1,0 +1,224 @@
+; 1944: The Loop Master
+1944:
+1944j:
+0:921d90:b8:01:18
+
+; 19xx
+19xx:
+19xxa:
+19xxh:
+19xxjr1:
+0:ff4dca:4:00:00
+0:ff0443:9f:14:70
+
+; Armored Warriors
+armwar:
+armwaru:
+0:ff27d6:256:00:04
+
+; Alien Vs Predator
+avspu:
+avspa:
+avspj:
+0:ffeac0:31d:01:01
+0:ffedda:1:44:44
+
+; Battle Circuit
+batcirj:
+batcira:
+batcirjregion:
+0:ff0482:35:00:03
+0:ff04b7:e3:03:00
+
+; Capcom Sports Club
+csclubj:
+cscluba:
+csclub:
+0:ff9894:50:00:b2
+0:ff98e4:dc:1a:01
+
+; Cyberbots: Fullmetal Madness
+cybots:
+cybotsj:
+cybotsjregion:
+0:ffe6a0:5:00:43
+0:ffe6a5:4b:41:00
+
+; Dungeons & Dragons: Tower Of Doom
+ddtod:
+ddtodu:
+ddtodh:
+ddtodjr1:
+ddtodj:
+ddtodur1:
+0:ff1050:1dd:0a:10
+
+; Dungeons & Dragons: Shadow Over Mystara
+ddsom:
+ddsoma:
+ddsomr1:
+ddsomjr1:
+ddsomj:
+ddsomur1:
+ddsomu:
+0:ff0fd0:8b:12:09
+
+; Dimahoo/Great Mahou Daisakusen
+dimahoo:
+gmahou:
+0:928586:3C:00:40
+
+
+; Darkstalkers: The Night Warriors
+dstlk:
+dstlku:
+dstlkur1:
+dstlka:
+vampj:
+vampja:
+vampjr1:
+0:fff4aa:5:00:43
+0:fff4af:37:41:00
+0:ffe976:4:00:00
+
+; Eco Fighters
+ecofghtr:
+0:ff0339:a0:0a:00
+0:ff8106:4:00:00
+
+
+; Gigawing
+gigawing:
+gwingj:
+0:ff70dc:170:00:01
+
+; Megaman/Rockman
+megaman:
+rockmanj:
+0:ffeed0:28:00:00
+0:ffef10:28:00:02
+
+; Megaman 2/ Rockman 2 : The Power Fighters
+megaman2:
+0:ffefc0:118:00:02
+0:fff047:1:01:01
+
+; Mars Matrix
+mmatrix:
+mmatrixj:
+0:ff0104:140:43:00
+0:ff4988:6:00:90
+
+; Marvel Super Heroes
+msh:
+mshu:
+0:ff2720:9f:00:0b
+
+; Marvel Super Heroes Vs. Street Fighter
+mshvsf:
+0:ff2b0c:63:00:03
+
+; Marvel Vs. Capcom: Clash Of Super Heroes
+mvsc:
+mvscb:
+mvscj:
+mvscjr1:
+mvsca:
+mvscar1:
+mvsch:
+mvscu:
+0:ff26fd:66:ff:00
+
+; Mighty! Pang
+mpangj:
+0:ff817c:1e0:00:01
+
+; Night Warriors: Darkstalker's Revenge
+nwarr:
+vhuntj:
+vhuntjr1:
+0:fff4e8:4:00:01
+0:fff4ec:44:00:00
+
+; Progear
+progear:
+progearj:
+0:ff3dcf:e5:20:04
+
+; Quiz Nanairo Dreams: Nijiirochou no Kiseki
+qndream:
+0:ff40b3:d8:00:00
+0:ff418b:02:01:00
+
+; Rockman 2 : The Power Fighters
+rckman2j:
+0:ffefc0:118:00:02
+0:fff047:1:01:01
+
+; Street Fighter Alpha
+sfa:
+sfzjr1:
+sfzj:
+sfau:
+0:ffaea0:9f:01:16
+
+; Street Fighter Alpha 2
+sfa2:
+0:ffdf6a:ad:00:01
+
+; Street Fighter Alpha 3
+sfa3:
+sfa3r1:
+sfz3j:
+sfz3jr1:
+sfz3a:
+sfz3jr2:
+0:ff23be:ae0:00:05
+
+; Super Gem Fighter Mini Mix
+sgemf:
+pfghtj:
+sgemfa:
+0:fff23a:2:00:02
+0:fff23c:ae:00:00
+
+; Super Puzzle Fighter 2x
+spf2t:
+spf2xj:
+0:ffd7aa:4e:00:02
+0:ff8081:1:01:01
+
+; Super Street Fighters 2: The New Challengers
+ssf2t:
+ssf2tu:
+ssf2ta:
+ssf2xj:
+ssf2tur1:
+0:ffd6a2:30:00:20
+0:ffd71a:4:00:00
+
+; Super Street Fighters 2: The New Challengers
+ssf2j:
+ssf2jr1:
+ssf2jr2:
+0:ffd5a2:30:00:20
+0:ffd61a:4:00:00
+
+; Vampire Savior The Lord Of Vampire
+vsav:
+vsava:
+vsavu:
+0:fff426:ad:00:02
+
+; X-men Children Of The Atom
+xmcota:
+xmcotaj1:
+0:ffec8e:3c:00:01
+
+; X-Men Vs. Street Fighter
+xmvsf:
+xmvsfur1:
+xmvsfu:
+xmvsfar1:
+0:ff256e:63:00:05
+

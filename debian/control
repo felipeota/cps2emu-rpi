@@ -1,0 +1,14 @@
+Source: cps2emu
+Section: user/games
+Priority: extra
+Maintainer: Marcus Fazzi (Anunakin) <anunakin@ieee.org>
+Build-Depends: debhelper (>= 4.0.0), xutils-dev, libreadline4-dev, libxt-dev, libhildon1-dev, libglib2.0-0, libsdl1.2, libxrender1, zlib1g-dev, libqt4-gui, libpulse0,  libqt4-core, libqt4-dbus, libqt4-dev, zlib1g, libxdmcp6, libfontconfig1, libqt4-xml, libsm6, libxext6, libexpat1, libasound2, opengles-sgx-img-common, libxau6, libfreetype6, libpng12-0, libsdl1.2-dev, libdbus-1-3, libice6, libx11-6
+Standards-Version: 3.6.1
+
+Package: cps2emu
+Architecture: armel
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Replaces: cps2gui
+XSBC-Bugtracker: mailto:anunakin@ieee.org?subject=CPS2 bug!
+Description: CPS2 emulator for Linux Maemo!
+ You need copy your zipped ROMs to "~/MyDocs/ROMs/CPS2"!

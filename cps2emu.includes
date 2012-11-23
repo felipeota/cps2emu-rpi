@@ -1,0 +1,16 @@
+cps2gui
+selector/minimal
+selector/minizip
+selector/readpng
+selector
+src/cps2
+src/cpu/cyclone
+src/cpu/drz80
+src/cpu/fame
+src/cpu/m68000
+src/cpu/m68k
+src/cpu/z80
+src/include
+src/sound
+src/zip
+src
